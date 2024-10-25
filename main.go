@@ -14,7 +14,7 @@ func main() {
 	//router.SetupRoutes(app)
 
 	app.Get("/live", func(c *fiber.Ctx) error {
-		return c.SendString("We are alive") // => 404 "Not Found"
+		return c.SendString("We are alive!") // => 404 "Not Found"
 	})
 	// handle unavailable route
 	app.Use(func(c *fiber.Ctx) error {
