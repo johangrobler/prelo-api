@@ -26,9 +26,9 @@ func SetupRoutes(app *fiber.App) {
 
 	//items
 
-	api.Get("items", handlers.GetItems)
+	api.Get("items", jwt, handlers.GetItems)
 	api.Post("items", jwt, handlers.CreateItem)
-	api.Get("items/:id", handlers.GetItem)
+	api.Get("items/:id", jwt, handlers.GetItem)
 	api.Put("items/:id", jwt, handlers.UpdateItem)
 	api.Delete("items/:id", jwt, handlers.DeleteItem)
 	api.Get("items/user/:id", handlers.GetItemsByUserID)
