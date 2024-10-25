@@ -9,7 +9,7 @@ func DBMigration() {
 
 	//db.AutoMigrate(&Brand{})
 	//db.AutoMigrate(&Category{})
-	db.AutoMigrate(&User{})
+	db.AutoMigrate(&Item{})
 	/*
 	   db.AutoMigrate(&User{})
 	   db.AutoMigrate(&Space{})
