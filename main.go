@@ -13,7 +13,7 @@ func main() {
 	app.Use(cors.New())
 	//router.SetupRoutes(app)
 
-	app.Get("/live", func(c *fiber.Ctx) error {
+	app.Get("/", func(c *fiber.Ctx) error {
 		return c.SendString("We are alive!") // => 404 "Not Found"
 	})
 	// handle unavailable route
