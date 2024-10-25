@@ -1,5 +1,5 @@
 ### register
-POST http://localhost:8080/v1/auth/login
+POST https://seahorse-app-36ato.ondigitalocean.app/v1/auth/login
 Content-Type: application/json
 
 { 
@@ -9,7 +9,7 @@ Content-Type: application/json
 
 
 ### register
-POST http://localhost:8080/v1/auth/register
+POST https://seahorse-app-36ato.ondigitalocean.app/v1/auth/register
 Content-Type: application/json
 
 {
