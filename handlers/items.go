@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"prelo/database"
 	"prelo/models"
 
@@ -18,14 +19,21 @@ func GetItems(c *fiber.Ctx) error {
 
 func CreateItem(c *fiber.Ctx) error {
 	db := database.DB.Db
-	userID := c.Locals("userID")
 
+	userID := c.Locals("userID").(string)
 	var item models.Item
 	if err := c.BodyParser(&item); err != nil {
 		return err
 	}
-	item.UserID = userID.(string)
-	db.Create(&item)
+	//item.UserID = userUUID
+	fmt.Println("USER ID:", userID)
+
+	item.UserID = userID
+
+	err := db.Create(&item).Error
+	if err != nil {
+		return c.Status(500).JSON(fiber.Map{"status": "error", "message": "Could not create card", "data": err})
+	}
 	return c.JSON(item)
 }
 

@@ -8,11 +8,11 @@ import (
 type Item struct {
 	gorm.Model
 	ID          uuid.UUID `gorm:"type:uuid;"`
-	UserID      string    `gorm:"type:uuid;" json:"user_id"`
+	UserID      string    `json:"user_id"`
 	Name        string    `json:"name" `
 	Description string    `json:"description"`
-	CategoryID  string    `gorm:"type:uuid;" json:"category_id"`
-	BrandID     string    `gorm:"type:uuid;" json:"brand_id"`
+	CategoryID  string    `json:"category_id"`
+	BrandID     string    `json:"brand_id"`
 	Price       float64   `json:"price"`
 	Quantity    int       `json:"quantity"`
 }

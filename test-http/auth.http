@@ -3,7 +3,7 @@ POST https://seahorse-app-36ato.ondigitalocean.app/v1/auth/login
 Content-Type: application/json
 
 { 
-  "email":"johan,grobler@prelo.co.za",
+  "email":"johan.grobler@prelo.co.za",
   "password":"password"
 }
 
@@ -15,6 +15,27 @@ Content-Type: application/json
 {
   "first_name":"Johan",
   "last_name":"Grobler",
-  "email":"johan,grobler@prelo.co.za",
+  "email":"johan.grobler@prelo.co.za",
   "password":"password"
+}
+
+### register
+
+POST http://localhost:8080/v1/items
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMmVjODEyZTItMzAwZC00M2RhLWIzNzEtNDcyYWZmNmVjMGJhIiwiZmlyc3ROYW1lIjoiSm9oYW4iLCJsYXN0TmFtZSI6Ikdyb2JsZXIiLCJyb2xlIjoiVEVOQU5UIn0sImV4cCI6MTczMDc1MDY0MywiaWF0IjoxNzI5ODg2NjQzfQ.YtyBx66lR_n6Huwpzqg1llzT7KAKwFWhLTFSmE6TmsU
+
+{
+  "name":"Blue",
+  "description":"Dress"
+  
+}
+
+### register
+
+GET https://seahorse-app-36ato.ondigitalocean.app/v1/items
+Content-Type: application/json
+
+{
+  "name":""
 }

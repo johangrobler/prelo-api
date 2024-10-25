@@ -5,7 +5,7 @@ import "prelo/database"
 func DBMigration() {
 	db := database.DB.Db
 
-	db.Exec("GRANT CREATE ON DATABASE prelo TO prelo;")
+	//db.Exec("drop table items")
 
 	//db.AutoMigrate(&Brand{})
 	//db.AutoMigrate(&Category{})
