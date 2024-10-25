@@ -7,8 +7,9 @@ func DBMigration() {
 
 	db.Exec("GRANT CREATE ON DATABASE prelo TO prelo;")
 
-	db.AutoMigrate(&Brand{})
-	db.AutoMigrate(&Category{})
+	//db.AutoMigrate(&Brand{})
+	//db.AutoMigrate(&Category{})
+	db.AutoMigrate(&User{})
 	/*
 	   db.AutoMigrate(&User{})
 	   db.AutoMigrate(&Space{})

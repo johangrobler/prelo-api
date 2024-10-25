@@ -1,0 +1,20 @@
+### register
+POST http://localhost:8080/v1/auth/login
+Content-Type: application/json
+
+{ 
+  "email":"johan,grobler@prelo.co.za",
+  "password":"password"
+}
+
+
+### register
+POST http://localhost:8080/v1/auth/register
+Content-Type: application/json
+
+{
+  "first_name":"Johan",
+  "last_name":"Grobler",
+  "email":"johan,grobler@prelo.co.za",
+  "password":"password"
+}
