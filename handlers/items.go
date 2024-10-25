@@ -13,7 +13,7 @@ func GetItems(c *fiber.Ctx) error {
 	userID := c.Locals("userID").(string)
 	db := database.DB.Db
 	var items []models.Item
-	db.Order("CreatedAt desc").Where("user_id = ?", userID).Find(&items)
+	db.Order("created_at desc").Where("user_id = ?", userID).Find(&items)
 	return c.JSON(items)
 
 }

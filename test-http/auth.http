@@ -21,13 +21,13 @@ Content-Type: application/json
 
 ### register
 
-POST http://localhost:8080/v1/items
+GET http://localhost:8080/v1/items
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMmVjODEyZTItMzAwZC00M2RhLWIzNzEtNDcyYWZmNmVjMGJhIiwiZmlyc3ROYW1lIjoiSm9oYW4iLCJsYXN0TmFtZSI6Ikdyb2JsZXIiLCJyb2xlIjoiVEVOQU5UIn0sImV4cCI6MTczMDc1MDY0MywiaWF0IjoxNzI5ODg2NjQzfQ.YtyBx66lR_n6Huwpzqg1llzT7KAKwFWhLTFSmE6TmsU
 
 {
   "name":"Blue",
-  "description":"Dress"
+  "description":"Pants"
   
 }
 

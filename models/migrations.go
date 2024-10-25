@@ -5,11 +5,11 @@ import "prelo/database"
 func DBMigration() {
 	db := database.DB.Db
 
-	//db.Exec("drop table items")
+	db.Exec("select 1")
 
 	//db.AutoMigrate(&Brand{})
 	//db.AutoMigrate(&Category{})
-	db.AutoMigrate(&Item{})
+	//db.AutoMigrate(&Item{})
 	/*
 	   db.AutoMigrate(&User{})
 	   db.AutoMigrate(&Space{})
