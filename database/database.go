@@ -1,7 +1,6 @@
 package database
 
 import (
-	"fmt"
 	"log"
 	"os"
 	"prelo/config"
@@ -23,8 +22,7 @@ func Connect() {
 
 	//dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%d sslmode=prefer TimeZone=Asia/Shanghai", config.Config("DB_HOST"), config.Config("DB_USER"), config.Config("DB_PASSWORD"), config.Config("DB_NAME"), port)
 	dsn := config.Config("DB")
-
-	fmt.Println(dsn)
+	dsn = "postgresql://doadmin:AVNS_3sijbXmBTLNjtwjgBeB@prelo-postgresql-do-user-17549098-0.f.db.ondigitalocean.com:25060/defaultdb?sslmode=require"
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Info),
