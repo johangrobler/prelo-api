@@ -1,0 +1,13 @@
+name: Prelo Go
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Hello:
+    runs-on: ubuntu-24.10
+    steps:
+      - name: Hello
+        run: echo "Hello World"
