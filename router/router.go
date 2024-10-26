@@ -28,11 +28,16 @@ func SetupRoutes(app *fiber.App) {
 
 	api.Get("items", jwt, handlers.GetItems)
 	api.Post("items", jwt, handlers.CreateItem)
-	api.Get("items/:id", jwt, handlers.GetItem)
+	api.Get("items/:id", jwt,
+		handlers.GetItem)
 	api.Put("items/:id", jwt, handlers.UpdateItem)
 	api.Delete("items/:id", jwt, handlers.DeleteItem)
 	api.Get("items/user/:id", handlers.GetItemsByUserID)
 	api.Get("items/brand/:id", handlers.GetItemsByBrandID)
 	api.Get("items/category/:id", handlers.GetItemsByCategoryID)
+
+	//images
+
+	api.Post("image/:id/:source", jwt, handlers.UploadFile)
 
 }

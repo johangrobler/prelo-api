@@ -10,6 +10,8 @@ func DBMigration() {
 	//db.AutoMigrate(&Brand{})
 	//db.AutoMigrate(&Category{})
 	//db.AutoMigrate(&Item{})
+	//db.AutoMigrate(&Image{})
+
 	/*
 	   db.AutoMigrate(&User{})
 	   db.AutoMigrate(&Space{})
